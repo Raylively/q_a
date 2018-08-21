@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h2>文章首页</h2>
+        <p>在这里你可以上传，管理，分享自己的文章，也可以浏览收藏别人的文章</p>
+    </div>
+{% endblock %}
+
+ {% block js_code %}
+    <script>
+        $(document).ready(
+            function () {
+                 $('#nav-article').addClass('active')
+            }
+        )
+        </script>
+ {% endblock %}

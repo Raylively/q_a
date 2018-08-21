@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Flask example</h1>
+        <p>凌霜尽欢锦,何处重寻觅</p>
+    </div>
+{% endblock %}
+
+ {% block js_code %}
+    <script>
+        $(document).ready(
+            function () {
+                 $('#nav-index').addClass('active')
+            }
+        )
+        </script>
+ {% endblock %}
