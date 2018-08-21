@@ -1,0 +1,18 @@
+.form-container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+.forget_password{
+    /*text-align: left;*/
+    float: right;
+    text-decoration: none;
+}
+.goto_login{
+    /*text-align: right;*/
+    float: right;
+    text-decoration: none;
+}
