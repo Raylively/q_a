@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>电影首页</h1>
+        <p>在这里你可以上传，管理，分享自己的电影，也可以浏览收藏别人的电影</p>
+    </div>
+{% endblock %}
+
+ {% block js_code %}
+    <script>
+        $(document).ready(
+            function () {
+                 $('#nav-movie').addClass('active')
+            }
+        )
+        </script>
+ {% endblock %}

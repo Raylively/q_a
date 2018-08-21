@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <div class="jumbotron" style="padding: 10px 20px;">
+        <h3>{{ current_user.name }}的个人中心:我的个人信息</h3>
+    </div>
+
+    <div>
+        {% include 'includes/_user_menu.html' %}
+        <div class="col-md-10">
+            <div class="jumbotron" style="padding-top: 10px">
+                <h3>修改个人密码</h3>
+                <hr style="border:dashed"/>
+                <form role="form" method="post" class="col-md-4 col-md-offset-4">
+                    <div class="form-group">
+                        {{ form.old_pwd }}
+                        {% for err in form.old_pwd.errors %}
+                            <p style="color:rosybrown">{{ err }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.new_pwd }}
+                        {% for err in form.new_pwd.errors %}
+                            <p style="color:rosybrown">{{ err }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group text-center">
+                        {{ form.csrf_token }}
+                        {{ form.submit }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js_code %}
+    <script>
+        $(document).ready(
+            function () {
+                $('#item-2').addClass('list-group-item-success')
+            }
+        )
+    </script>
+{% endblock %}
